@@ -21,6 +21,8 @@ class RequestTest extends TestCase
         $_SERVER['REQUEST_METHOD'] = 'GET';
         $_SERVER['REQUEST_URI'] = '/hello';
         $_SERVER['HTTP_ACCEPT'] = 'text/html';
+        $_GET = ['id' => '42'];
+        $_POST = [];
 
         $request = Request::capture();
 
